@@ -10,17 +10,24 @@
           caption{
                font-size: 40px;
           }
+
           table{
                margin: auto;
+               border-collapse:collapse;
+               border:4px solid;
           }
+
          th,td {
                border: 1px black solid;
                text-align: center;
                width: 200px;
                height: 50px;
                font-size: 30px;
-               border-radius: 5px;
 
+          }
+
+          thead{
+               border:4px solid; 
           }
 
      </style>
