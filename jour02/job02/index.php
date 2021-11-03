@@ -12,8 +12,9 @@
     <?php
     $nbr = 1337;
     $i = 0;
+    //pour ce cas si j'utilise une boucle while
     while ($i <= 1337) {
-        if ($i != 26 && $i != 37 && $i != 88 && $i != 1111) {
+        if (($i != 26) && ($i != 37) && ($i != 88) && ($i != 1111)) {
             echo $i . '<br>';
         }
 

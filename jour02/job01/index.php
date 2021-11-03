@@ -16,11 +16,12 @@
     //une boucle for qui va faire une iterration sur l'ensemble des nombres
     for ($i = 1; $i < $nombre; $i++) {
 
-      //ma condition if pour le nombre 42
+        //ma condition if pour le nombre 42
         if ($i == 42) {
-            echo "<b><u>$i</b></u>" . '<br>';
-        } else
+            echo "<b><u>$i</u></b>" . '<br>';
+        } else {
             echo $i . '<br>';
+            }
     }
     ?>
 
