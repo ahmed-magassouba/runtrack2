@@ -11,7 +11,7 @@
 <body>
     <?php
     //une première boucle qui itère 2 a 1000
-    // 1 étant pas un nombre premier car etant un deviseur de tout nombre
+
     for ($i = 2; $i <= 1000; $i++) {
         //je declare un booléen 
         $verif = true;
@@ -24,7 +24,6 @@ le contenu de la variable $i
 est egal a 0 et que $x est different de $i alors
  le nombre n'est pas premier*/
             if ($i % $x == 0  and  $x != $i) {
-                //donc ma verification est fausse
                 $verif = false;
             }
         }
