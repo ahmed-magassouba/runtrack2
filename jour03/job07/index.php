@@ -15,8 +15,6 @@
     for ($i = 0; isset($str[$i]) == true; $i++) {
         if ($i == 59) {
             $new_str = $new_str . $str[0];
-        } elseif ($i == 0) {
-            $new_str = $new_str . $str[59];
         } else {
             $new_str =  $new_str . $str[$i + 1];
         }
