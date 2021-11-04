@@ -15,8 +15,9 @@
         }
         td,th{
             border: 1px solid black;
-            width: 180px;
+            width: 380px;
             height: 50px;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -27,9 +28,10 @@
     $str = "On n est pas le meilleur quand on le croit mais quand on le sait";
     $cc = 0;
     $cv = 0;
+
     $dic = array(
         "consonnes" => array("b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"),
-        "voyelles" => array('a', 'e', 'i', 'o', 'u', 'y'),
+        "voyelles" => array('a', 'e', 'i', 'o', 'u', 'y','O'),
     );
 
     for ($i = 0; isset($str[$i]) == true; $i++) {
@@ -56,8 +58,9 @@
         <th>“Consonnes”.</th>
     </thead>
     <tbody>
-        <td><?php  echo "nous avons $cc consonnes <br>";?></td>
+        
         <td><?php  echo "nous avons $cv voyelles <br>";?> </td>
+        <td><?php  echo "nous avons $cc consonnes <br>";?></td>
     </tbody>
 </table>
 
