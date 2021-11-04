@@ -11,14 +11,13 @@
 <body>
     <?php
     $str = "Certaines choses changent, et d'autres ne changeront jamais.";
-    for($x=0 ; isset($str[$x])==true;$x++){
-  for($i=0;$i<1;$i++){
-    $str[$i+1]=$str[$i];
-    echo $str[$i];
+$new_str ="";
+  for($i=0;isset($str[$i])==true;$i++){
+    $new_str =  $new_str.$str[$i+1];
+    
   }
-
-}
-
+  
+echo $new_str;
 
   
     
