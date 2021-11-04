@@ -30,7 +30,7 @@
     $cv = 0;
 
     $dic = array(
-        "consonnes" => array("b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"),
+        "consonnes" => array("b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"),
         "voyelles" => array('a', 'e', 'i', 'o', 'u', 'y','O'),
     );
 
