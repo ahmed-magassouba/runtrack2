@@ -52,7 +52,7 @@
     for ($x = 1; $x < $l / 2; $x++) {
         echo '<br>' . '|';
  //une boucle pour creer de l'espace en quantité egal a la hauteur
-        for ($y = 0; $y <= $l; $y++) {
+        for ($y = 0; $y <= $h; $y++) {
             echo '&nbsp';
         }
  //j'affiche de nouveau le carractère | a la fin de l'espace créer
@@ -63,7 +63,7 @@
 
     echo  '|';
 // boucle pour le bas de la maison
-    for ($i = 1; $i < $_GET['hauteur']; $i++) {
+    for ($i = 1; $i < $h ; $i++) {
         echo '_';
     }
 
