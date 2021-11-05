@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="./index.php" action="get">
+    <form action="./index.php" method="get">
 
         <label for="prenom">Prenom:</label><br>
         <input type="text" id="prenom" name="prenom" placeholder="Entrer votre prénom"><br>
