@@ -28,26 +28,46 @@
 
 
     <?php
-    $h=$_GET['hauteur'];
-    
-    for ($x = 1; $x <= $_GET['largeur']; $x++) {
-        echo'<br>';
-        echo'/';
-        for ($i = 1; $i <$x; $i++) {
+    // je reccupère la hauteur et la largeur 
+    //ensuite je les stock dans les variable $l et $h
+    $l = $_GET['largeur'];
+    $h= $_GET['hauteur'];
+
+  //une boucle  pour la hauteur pour afficher un"/" a chaque hauteur
+    for ($x = 1; $x <= $h ; $x++) {
+        echo '<br>';
+        echo '/';
+  //boucle pour afficher le carractère "_" a la suite par rapport a la valeur de x
+  //pour x=1 on aura _ pour x=2 on aura __ ainsi de suite   
+        for ($i = 1; $i < $x; $i++) {
             echo '_';
         }
-       
-        echo'\\';
+ // on affiche le carractère \ ala fin de charractère "_"
+ // on utilise le double \\ pour evité les problème d'echap
+        echo '\\';
     }
-   
-    for ($x = 1; $x <=$h/2; $x++) {
-        echo'<br>'.'|';  
+
+    for ($x = 1; $x < $l / 2; $x++) {
+        echo '<br>' . '|';
+
+        for ($y = 0; $y <= $h; $y++) {
+            echo '&nbsp';
+        }
+
+        echo  '|';
+    }
+
+    echo "<br>";
+
+    echo  '|';
+
+    for ($i = 1; $i < $_GET['hauteur']; $i++) {
+        echo '_';
     }
 
 
-    for ($i = 1; $i< $_GET['largeur']; $i++) {
-       echo '_';
-    }
+    echo  '|';
+
 
     ?>
 
