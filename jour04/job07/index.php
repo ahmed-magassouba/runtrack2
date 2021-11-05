@@ -46,21 +46,23 @@
  // on utilise le double \\ pour evité les problème d'echap
         echo '\\';
     }
-
+//pour le bas de ma maison 
+//j'affiche le carractète |  au nomre de la moitié de la valeur de la largeur
+//et je diminu de 1
     for ($x = 1; $x < $l / 2; $x++) {
         echo '<br>' . '|';
-
-        for ($y = 0; $y <= $h; $y++) {
+ //une boucle pour creer de l'espace en quantité egal a la hauteur
+        for ($y = 0; $y <= $l; $y++) {
             echo '&nbsp';
         }
-
+ //j'affiche de nouveau le carractère | a la fin de l'espace créer
         echo  '|';
     }
 
     echo "<br>";
 
     echo  '|';
-
+// boucle pour le bas de la maison
     for ($i = 1; $i < $_GET['hauteur']; $i++) {
         echo '_';
     }
