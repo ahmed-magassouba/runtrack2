@@ -32,7 +32,6 @@
     $i=0;
     foreach($_GET as $ind=>$val){
        $indice[$i]=$ind;
-       $valeur[$i]=$val;
        $i++;
     }
   
