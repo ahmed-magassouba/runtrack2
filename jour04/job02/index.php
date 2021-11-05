@@ -27,9 +27,16 @@
     <?php
 
    // var_dump($_GET);
-    
+    $indice=array();
+   
+    $i=0;
+    foreach($_GET as $ind=>$val){
+       $indice[$i]=$ind;
+       $valeur[$i]=$val;
+       $i++;
+    }
   
-
+    
     ?>
 <table>
     <thead>
@@ -40,16 +47,16 @@
     </thead>
     <tbody>
         <tr>
-            <td>NOM</td>
-            <td><?php echo$_GET['prenom'] ?></td>
+            <td><?php echo $indice[0]?></td>
+            <td><?php echo $_GET['prenom'] ?></td>
         </tr>
         <tr>
-            <td>Prenom</td>
-            <td><?php echo$_GET['nom'] ?></td>
+            <td><?php echo $indice[1]?></td>
+            <td><?php echo $_GET['nom'] ?></td>
         </tr>
         <tr>
-            <td>Age</td>
-            <td><?php echo$_GET['age'] ?></td>
+            <td><?php echo $indice[2]?></td>
+            <td><?php echo $_GET['age'] ?></td>
         </tr>
 
     </tbody>
