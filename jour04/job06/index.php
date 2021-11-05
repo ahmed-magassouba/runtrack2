@@ -19,10 +19,16 @@
     </form>
 
     <?php
-    if ($_GET['nombre'] % 2 == 0) {
-        echo '<h1>'.$_GET['nombre'] . '  est un nombre pair'.'</h1>';
+    if (isset($_GET['nombre'])) {
+
+        if ($_GET['nombre'] % 2 == 0) {
+            echo '<h1>' . $_GET['nombre'] . '  est un nombre pair' . '</h1>';
+        } else {
+            echo '<h1>' . $_GET['nombre'] . '  est un nombre impair' . '<h1>';
+        }
+
     } else {
-        echo '<h1>'. $_GET['nombre'] . '  est un nombre impair'.'<h1>';
+        echo '<h2>Vous n\'avez pas saisis de nombre</h2>';
     }
 
     ?>

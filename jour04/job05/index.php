@@ -23,13 +23,18 @@
 
     <?php
 
-   // var_dump($_POST);
-    if($_POST['username']=='Jhon' && $_POST['password']=='Rambo' ){
-        echo"<h1>C’est pas ma guerre</h1>";
-    }else{
-        echo"<h1>Votre pire cauchemar</h1>";
+    // var_dump($_POST);
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+
+        if ($_POST['username'] == 'Jhon' && $_POST['password'] == 'Rambo') {
+            echo "<h1>C’est pas ma guerre</h1>";
+        } else {
+            echo "<h1>Votre pire cauchemar</h1>";
+        }
+
+    } else {
+        echo '<p>Veillez saisir les renseignements manquants</p>';
     }
-    
     ?>
 
 
