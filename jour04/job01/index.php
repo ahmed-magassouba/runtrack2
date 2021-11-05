@@ -22,10 +22,10 @@
     </form>
 
     <?php
-    var_dump($_GET);
+   // var_dump($_GET);
     $compteur=0;
    foreach($_GET as $valeur){
-       echo $valeur.'<br>';
+     //  echo $valeur.'<br>';
       $compteur++;
    }
    echo'le nombre d\'argument GET est: '.$compteur.'<br>';
