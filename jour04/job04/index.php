@@ -26,40 +26,79 @@
 
     <?php
 
-   // var_dump($_POST);
-    $indice=array();
-   
-    $i=0;
-    foreach($_POST as $ind=>$val){
-       $indice[$i]=$ind;
-       $i++;
-    }
-  
-    
-    ?>
-<table>
-    <thead>
-    <tr>
-        <th>Arguments</th>
-        <th>Valeurs</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><?php echo $indice[0]?></td>
-            <td><?php echo $_POST['prenom'] ?></td>
-        </tr>
-        <tr>
-            <td><?php echo $indice[1]?></td>
-            <td><?php echo $_POST['nom'] ?></td>
-        </tr>
-        <tr>
-            <td><?php echo $indice[2]?></td>
-            <td><?php echo $_POST['age'] ?></td>
-        </tr>
+    // var_dump($_POST);
+    $indice = array();
 
-    </tbody>
-</table>
+    $i = 0;
+    foreach ($_POST as $ind => $val) {
+        $indice[$i] = $ind;
+        $i++;
+    }
+
+
+    ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Arguments</th>
+                <th>Valeurs</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <?php
+                    if (isset($indice[0])) {
+                        echo $indice[0];
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    if (isset($_POST['prenom'])) {
+                        echo $_POST['prenom'];
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <?php
+                    if (isset($indice[1])) {
+                        echo $indice[1];
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    if (isset($_POST['nom'])) {
+                        echo $_POST['nom'];
+                    }
+                    ?>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <?php
+                    if (isset($indice[2])) {
+                        echo $indice[2];
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    if (isset($_POST['age'])) {
+                        echo $_POST['age'];
+                    }
+                    ?>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 
 </body>
 
