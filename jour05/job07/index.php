@@ -42,7 +42,7 @@
 
                 for ($x = 0; $x < 26; $x++) {
 
-                    if ($tab[$x] == $_GET['str'][$i]) {
+                    if ($tab[$x] == $_GET['str'][$i] )  {
 
                         return '<b><i>' . $_GET['str'] . '</i></b>';
                     } elseif ($_GET['str'][$i] == $space) {
