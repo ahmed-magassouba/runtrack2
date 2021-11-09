@@ -9,36 +9,35 @@
 </head>
 
 <body>
+
+
     <?php
+
     var_dump($_GET);
 
     session_start();
 
-    if (isset($_GET['prenom']) == true) {
-        $_SESSION['prenom']=$_GET['prenom'];
-       
-   }else{
 
-    //    if (isset($_SESSION['nbvisites']) == true) {
+    if (isset($_GET['reset']) == true) {
+        unset($_SESSION['prenom']);
+    } else {
 
-    //        $_SESSION['nbvisites']++;
-
-    //    } else {
-    //        $_SESSION['nbvisites'] = 0;
-    //    }
-   
-      
-       echo "saisissé votre prenom";
-   }
-
-   echo '<b><i>'."Votre prénom dans la session est : " . $_SESSION['prenom'].'</b></i>';
+        if (isset($_GET['prenom']) == true) {
+            $_SESSION['prenom'] .= '&nbsp&nbsp' . $_GET['prenom'];
+        } else {
+            echo "saisissez votre prenom";
+        }
 
 
-    
+
+        echo '<b><i>' . "La liste des prénoms dans la session  : " . $_SESSION['prenom'] . '</b></i>';
+    }
 
     ?>
+
+
     <form action="./index.php" method="get">
-    <br>
+        <br>
         <label for="prenom">Prenom:</label>
         <input type="text" id="prenom" name="prenom" placeholder="Entrer votre prénom"><br><br>
 

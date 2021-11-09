@@ -12,6 +12,7 @@
 
 
     <?php
+    
     if (isset($_GET['reset']) == true) {
         unset( $_COOKIE['nbvisites']);
         echo"0";
