@@ -12,6 +12,7 @@
             width: 80%;
             border-collapse: collapse;
             border: 1px solid black;
+            text-align: center;
         }
         th,td{
             border: 1px solid black;
