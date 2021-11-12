@@ -28,6 +28,7 @@
 
 
     <?php
+    
     if (isset($_GET['largeur']) && isset($_GET['hauteur'])) {
 
 
@@ -36,7 +37,7 @@
         //ensuite je les stock dans les variable $l et $h
         $l = $_GET['largeur'];
         $h = $_GET['hauteur'];
-       // if (($l == 10 && $h == 5) || ($l == 20 && $h == 10)) {
+       if (($l == 10 && $h == 5) || ($l == 20 && $h == 10)) {
             //une boucle  pour la hauteur pour afficher un"/" a chaque hauteur
             for ($x = 1; $x <= $h; $x++) {
                 echo '<br>';
@@ -73,10 +74,10 @@
 
 
             echo  '|';
-        // }else{
-        //     echo"vous étés restreint a des mesures suivante largeur:10 et hauteur:5 <br>";
-        //     echo"ou largeur:20 et hauteur:10";
-        // }
+        }else{
+            echo"vous étés restreint a des mesures suivante largeur:10 et hauteur:5 <br>";
+            echo"ou largeur:20 et hauteur:10";
+        }
     }
     ?>
 
