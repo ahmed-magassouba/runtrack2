@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
+        table{
             margin: auto;
             width: 80%;
             border-collapse: collapse;
             border: 1px solid black;
-            text-align: center;
         }
-
-        th,
-        td {
+        th,td{
             border: 1px solid black;
             height: 50px;
         }
@@ -31,28 +28,34 @@
 
     mysqli_set_charset($bdd, 'UTF8');
 
-    $requete = mysqli_query($bdd, 'SELECT AVG(capacite) as capacite_moyenne FROM salles ');
+    $requete = mysqli_query($bdd, 'SELECT * FROM etudiants WHERE naissance BETWEEN "1998-01-01" AND "2018-12-31"');
 
-    $salles = mysqli_fetch_all($requete, MYSQLI_ASSOC);
+    $etudiants = mysqli_fetch_all($requete, MYSQLI_ASSOC);
 
-   // var_dump($salles);
+   // var_dump($etudiants);
 
     echo "<table><thead>
-  
-    <th>La capacite moyenne</th>
-
-   
- </thead>
+    <th>id</th>
+    <th>prenom</th>
+    <th>nom</th>
+    <th>naissance</th>
+    <th>sexe</th>
+    <th>email</th>
+</thead>
 <tbody>";
-        foreach ($salles as $salle) {
-            echo " <tr>
-               <td>" . $salle['capacite_moyenne'] . "</td>
+    foreach ($etudiants as $etudiant) {
+        echo " <tr>
+            <td>" . $etudiant['id'] . "</td>
+            <td>" . $etudiant['prenom'] . "</td>
+            <td>" . $etudiant['nom'] . "</td>
+            <td>" . $etudiant['naissance'] . "</td>
+            <td>" . $etudiant['sexe'] . "</td>
+            <td>" . $etudiant['email'] . "</td>
+        </tr>";
+    }
 
-           </tr>";
-      }
-
-        echo "</tbody>
-     </table>";
+    echo "</tbody>
+</table>";
 
 
 
