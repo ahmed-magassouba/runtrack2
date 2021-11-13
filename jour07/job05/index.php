@@ -22,14 +22,25 @@
             border: 20px solid black;
         }
 
-        input {
+        .styleinput {
             width: 80px;
             height: 80px;
             border-radius: 100%;
         }
+        .styleinputr {
+          width: 300px;
+          height: 60px;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family:fantasy ;
+        }
 
         input:hover {
             background-color: green;
+        }
+        h3{
+            background-color: white;
         }
     </style>
 </head>
@@ -42,15 +53,21 @@
     $joueur2 = 'O';
 
     echo '<form action="" method="get">';
-    echo ' <table>';
+    echo ' <table>
+      <thead>
+    <td colspan="3"><h3> tour du joueur1</h3></td>
+    </thead>';
     for ($i = 0; $i <= 2; $i++) {
         echo '<tr>';
         for ($j = 0; $j <= 2; $j++) {
 
-            echo ' <td><input type="submit" value="-" name="' . $case++ . '"></td>';
+            echo ' <td><input class="styleinput" type="submit" value="-" name="' . $case++ . '"></td>';
         }
         echo '</tr>';
     }
+    echo'<tfoot>
+    <td colspan="3"><input class="styleinputr"  type="submit" value="Renitialiser la partie" name="submit"></td>
+    </tfoot>';
     echo '</table>';
     echo '</form>';
 
@@ -80,6 +97,3 @@
         </tr>
     </table>
 </form> -->
-</body>
-
-</html>
