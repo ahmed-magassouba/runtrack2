@@ -1,0 +1,26 @@
+body{
+    background-color:red;
+    text-align: center;
+
+}
+fieldset{
+    width: 50%;
+    margin: auto;
+    background-color: seashell;
+    border-radius: 20px;
+}
+legend{
+font-size: 23px;
+}
+
+option{
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+input{
+    border-radius: 20px;
+    background-color: seagreen;
+
+}
