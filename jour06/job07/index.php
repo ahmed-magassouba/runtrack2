@@ -30,7 +30,7 @@
         if (isset($tab) == true) {
             if ($bool) {
 
-                for ($x = 0; isset($tab[$x]) == true; $x++) {
+                for ( $x = 0 ; $x <= $taille ; $x++) {
 
                     // for ($y = 0; isset($tab[$x][$y]) == true; $y++) {
                     // echo $tab[$x][$y] . '<br>';
